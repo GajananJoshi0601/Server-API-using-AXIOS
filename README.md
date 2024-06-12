@@ -55,7 +55,7 @@
 <p align="center">
     <img src="/SS/ss-2.jpg" alt="Playlist Page" width="400">
     <br>
-    <em>Playlist Page</em>
+    <em>Quote Of the Day</em>
 </p>
   
   <h2>License</h2>
