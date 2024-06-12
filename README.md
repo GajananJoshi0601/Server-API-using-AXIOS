@@ -1,125 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Server API using AXIOS</title>
-</head>
-<body>
-    <h1>Server API using AXIOS</h1>
+  <h1>Making Server-Side API using AXIOS</h1>
+  <p>This repository contains a project that demonstrates how to create a server-side API using AXIOS, a popular JavaScript library for making HTTP requests.</p>
+  
+  <h2>Project Overview</h2>
+  <ul>
+    <li>This project uses Node.js as the server-side runtime environment.</li>
+    <li>AXIOS is used to make HTTP requests to external APIs and to create a server-side API.</li>
+    <li>The project includes examples of GET, POST, PUT, and DELETE requests.</li>
+  </ul>
+  
+<h2 id="installation">Installation</h2>
+<p>To get started with Server-API, follow these steps:</p>
+<ol>
+    <li>Clone the repository:</li> 
+    <pre><code>git clone https://github.com/GajananJoshi0601/Band-Generator.git</code></pre>
+    <li>Open and Extract It</li>
+    <li>Create a Directory or Folder</li>
+    <li>Now index.js File creation</li>
+    <li>Initialize NPM : </li>
+    <pre><code>npm init -y</code></pre>
+    <li>Install the Required Packages : </li>
+    <pre><code>npm i express ejs body-parser</code></pre>
+    <pre><code>npm install express ejs body-parser</code></pre>
+    <li>Final Step Install nodemon : </li>
+    <pre><code>nodemon index.js</code></pre>
     
-    <p>Welcome to the <strong>Server-API-using-AXIOS</strong> project! This repository contains a simple example of how to use the Axios library to interact with a server-side API.</p>
+</ol>
+  
+  <h2>API Endpoints</h2>
+  <ul>
+    <li><code>GET /api/data</code>: Retrieves a list of data from an external API.</li>
+    <li><code>POST /api/data</code>: Creates a new data item and sends it to an external API.</li>
+    <li><code>PUT /api/data/:id</code>: Updates an existing data item and sends it to an external API.</li>
+    <li><code>DELETE /api/data/:id</code>: Deletes a data item from an external API.</li>
+  </ul>
+  
+  <h2>Technologies Used</h2>
+  <ul>
+    <li>Node.js</li>
+    <li>AXIOS</li>
+    <li>Embedded JS</li>
+    <li>Express JS</li>
+    <li>JavaScript</li>
+  </ul>
+  
+  <h2 id="overview">Quick Overview of the UI</h2>
+<p>Here are some screenshots showcasing the main features of our Spotify Clone:</p>
 
-    <h2>Table of Contents</h2>
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-        <li><a href="#usage">Usage</a></li>
-        <li><a href="#examples">Examples</a></li>
-        <li><a href="#contributing">Contributing</a></li>
-        <li><a href="#license">License</a></li>
-    </ul>
+<p align="center">
+    <img src="/SS/ss-1.jpg" alt="Home Page" width="400">
+    <br>
+    <em>Home Page</em>
+</p>
 
-    <h2 id="about">About</h2>
-    <p>This project demonstrates how to use <a href="https://axios-http.com/">Axios</a> to perform HTTP requests to a server. Axios is a promise-based HTTP client for JavaScript, which can be used in both the browser and Node.js.</p>
-
-    <h2 id="prerequisites">Prerequisites</h2>
-    <p>Before you begin, ensure you have met the following requirements:</p>
-    <ul>
-        <li>You have installed <a href="https://nodejs.org/">Node.js</a> and <a href="https://www.npmjs.com/">npm</a>.</li>
-        <li>You have a basic understanding of JavaScript and Node.js.</li>
-        <li>You have an API endpoint to interact with (you can use a mock server if needed).</li>
-    </ul>
-
-    <h2 id="installation">Installation</h2>
-    <p>To get started with this project, clone the repository and install the dependencies:</p>
-    <pre>
-        <code>
-            git clone https://github.com/yourusername/Server-API-using-AXIOS.git
-            cd Server-API-using-AXIOS
-            npm install
-        </code>
-    </pre>
-
-    <h2 id="usage">Usage</h2>
-    <p>Once you have installed the dependencies, you can start the application by running:</p>
-    <pre>
-        <code>
-            npm start
-        </code>
-    </pre>
-    <p>This will start the server and you can start making API requests using Axios.</p>
-    <p>In your project, you can create a new JavaScript file (e.g., <code>app.js</code>) and include the following example code to make API requests:</p>
-
-    <pre>
-        <code>
-            const axios = require('axios');
-
-            // GET request
-            axios.get('https://api.example.com/data')
-                .then(response => {
-                    console.log(response.data);
-                })
-                .catch(error => {
-                    console.error('Error fetching data:', error);
-                });
-
-            // POST request
-            axios.post('https://api.example.com/data', {
-                name: 'John Doe',
-                age: 30
-            })
-                .then(response => {
-                    console.log('Data saved:', response.data);
-                })
-                .catch(error => {
-                    console.error('Error saving data:', error);
-                });
-        </code>
-    </pre>
-
-    <h2 id="examples">Examples</h2>
-    <p>Here are some examples of how to use Axios to make different types of API requests:</p>
-    <pre>
-        <code>
-            const axios = require('axios');
-
-            // PUT request
-            axios.put('https://api.example.com/data/1', {
-                name: 'Jane Doe',
-                age: 25
-            })
-                .then(response => {
-                    console.log('Data updated:', response.data);
-                })
-                .catch(error => {
-                    console.error('Error updating data:', error);
-                });
-
-            // DELETE request
-            axios.delete('https://api.example.com/data/1')
-                .then(response => {
-                    console.log('Data deleted:', response.data);
-                })
-                .catch(error => {
-                    console.error('Error deleting data:', error);
-                });
-        </code>
-    </pre>
-
-    <h2 id="contributing">Contributing</h2>
-    <p>Contributions are welcome! Please follow these steps to contribute:</p>
-    <ol>
-        <li>Fork the repository.</li>
-        <li>Create a new branch (<code>git checkout -b feature/YourFeature</code>).</li>
-        <li>Make your changes and commit them (<code>git commit -m 'Add some feature'</code>).</li>
-        <li>Push to the branch (<code>git push origin feature/YourFeature</code>).</li>
-        <li>Open a Pull Request.</li>
-    </ol>
-    <p>For major changes, please open an issue first to discuss what you would like to change.</p>
-
-    <h2 id="license">License</h2>
-    <p>This project is licensed under the MIT License. See the <pre><code><a href="LICENSE">LICENSE</a></code></pre> file for more details.</p>
-</body>
-</html>
+<p align="center">
+    <img src="/SS/ss-2.jpg" alt="Playlist Page" width="400">
+    <br>
+    <em>Playlist Page</em>
+</p>
+  
+  <h2>License</h2>
+  <p>This project is licensed under the Project Owner : Gajanan Joshi.</p>
+  
+  <h2>Contributing</h2>
+  <p>If you'd like to contribute to this project, please fork the repository and submit a pull request or mail Please : gajananjoshi0601@gmail.com </p>
+  
+  <h2>Author</h2>
+  <p>Gajanan Joshi</p>
